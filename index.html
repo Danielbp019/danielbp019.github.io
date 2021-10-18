@@ -49,8 +49,8 @@
         <img src="assets/img/profile-img.png" alt="" class="img-fluid rounded-circle">
         <h1 class="text-light" style="font-family: 'Alex Brush', cursive;">Daniel Bautista P.</h1>
         <div class="social-links mt-3 text-center">
-          <a href="#"><i class="bi bi-github"></i></a>
-          <a href="#"><i class="bi bi-youtube"></i></a>
+          <a href="https://github.com/Danielbp019"><i class="bi bi-github"></i></a>
+          <a href="https://www.youtube.com/channel/UCuHc9hs5b6Fmhf_4sYFaTIg"><i class="bi bi-youtube"></i></a>
           <a href="error.html"><i class="bi bi-bug"></i></a>
         </div>
       </div>
@@ -304,9 +304,9 @@
         <div class="row" data-aos="fade-up">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter="*" class="filter-active">Todo</li>
               <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
+              <li data-filter=".filter-card">Documentos</li>
               <li data-filter=".filter-web">Web</li>
             </ul>
           </div>
@@ -319,7 +319,7 @@
               <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="App 1"><i class="bi bi-plus-circle"></i></a>
+                  class="portfolio-lightbox" title="Documento de macros"><i class="bi bi-plus-circle"></i></a>
                 <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
               </div>
             </div>
@@ -329,9 +329,7 @@
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
               <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Web 3"><i class="bi bi-plus-circle"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                <a><i class="bi bi-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"></i></a>
               </div>
             </div>
           </div>
@@ -458,12 +456,6 @@
             <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
               voluptatum deleniti atque</p>
           </div>
-          <!-- <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-            <div class="icon"><i class="bi bi-calendar4-week"></i></div>
-            <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-            <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum
-              soluta nobis est eligendi</p>
-          </div> -->
         </div>
 
       </div>
@@ -488,6 +480,22 @@
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Modal2 -->
+  <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true" style="z-index: 1000000;"> <!-- z-index mostar por encima del footer -->
+    <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-body">
+          <embed src="assets/pdf/MisamigasmacrosWoW.pdf" frameborder="0" width="100%" height="100%">
+        </div>
+        <div class="modal-footer">
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
