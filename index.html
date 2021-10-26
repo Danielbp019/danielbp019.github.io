@@ -55,6 +55,11 @@
         </div>
       </div>
 
+      <audio controls>
+        <source src="assets/mp3/WeWillRiseAgain.opus" type="audio/ogg">
+        Este es un elemento de audio no soportado por tu navegador, prueba con otro.
+      </audio>
+
       <nav id="navbar" class="nav-menu navbar">
         <ul>
           <li><a href="#hero" class="nav-link scrollto active"><i class="bi bi-house-door"></i> <span>Inicio</span></a>
@@ -481,9 +486,12 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Modal2 -->
-  <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true" style="z-index: 1000000;"> <!-- z-index mostar por encima del footer -->
+  <!-- ======= Modales ======= -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true" style="z-index: 1000000;">
+    <!-- z-index mostar por encima del footer -->
     <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-body">
@@ -496,6 +504,23 @@
       </div>
     </div>
   </div>
+
+  <!-- Modal2 -->
+  <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true" style="z-index: 1000000;">
+    <!-- z-index mostar por encima del footer -->
+    <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-body">
+          <embed src="assets/pdf/MisamigasmacrosWoW.pdf" frameborder="0" width="100%" height="100%">
+        </div>
+        <div class="modal-footer">
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button></div>
+        </div>
+      </div>
+    </div>
+  </div><!-- End  Footer -->
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
