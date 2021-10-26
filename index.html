@@ -55,7 +55,7 @@
         </div>
       </div>
 
-      <audio controls>
+      <audio autoplay controls id="miaudio">
         <source src="assets/mp3/WeWillRiseAgain.opus" type="audio/ogg">
         Este es un elemento de audio no soportado por tu navegador, prueba con otro.
       </audio>
@@ -434,32 +434,36 @@
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
             <div class="icon"><i class="bi bi-briefcase"></i></div>
             <h4 class="title"><a href="">Presentacion</a></h4>
-            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-              occaecati cupiditate non provident</p>
+            <p class="description">Hola! este soy yo o al menos una parte de mi y de lo que puedo llegar a hacer. He
+              puesto mucho de mi en algunas cosas de esta web ademas de la edicion.</p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
             <div class="icon"><i class="bi bi-card-checklist"></i></div>
             <h4 class="title"><a href="">Esta Web</a></h4>
-            <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat tarad limino ata</p>
+            <p class="description">La idea de esta web viene de mucho mucho antes mas lejos del 2014, he cambiado el
+              contenido y su forma a lo largo del tiempo, he pasado por varios hosting y he tenido que agregar y retirar
+              codigo pero, al final, aqui estoy. Para mi es bueno que este pequeño proyecto aun viva despues de tanto
+              tiempo.</p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
             <div class="icon"><i class="bi bi-bar-chart"></i></div>
             <h4 class="title"><a href="">Curiosidad</a></h4>
-            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur</p>
+            <p class="description">Simplemente sentia curiosidad de lo que era las github pages y lo que podian hacer
+              asi que me anime a probar.</p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
             <div class="icon"><i class="bi bi-binoculars"></i></div>
             <h4 class="title"><a href="">Escritos</a></h4>
-            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-              mollit anim id est laborum</p>
+            <p class="description">Este es un sitio bueno para subir mis escritos y diversas cosas más. La razon detras
+              de esto es que es muy dicifil encontrar cierta informacion de algunos temas pues varias palabras o titulos
+              de publicaciones se suelen super poner a los temas mas tecnicos y difucultan mucho encontrar estas cosas.</p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
             <div class="icon"><i class="bi bi-brightness-high"></i></div>
             <h4 class="title"><a href="">Demostracion</a></h4>
-            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-              voluptatum deleniti atque</p>
+            <p class="description">Queria mostar un poco de lo que puedo hacer, que mas personas lo vieran. Ya que este
+              alojamiento no soprota codigos mas avanzados de programacion me parecio una muy buena idea para mostar un
+              nivel inicial y de paso hacerme de un lugar donde poder mostrar algunas cosas mas.</p>
           </div>
         </div>
 
@@ -534,6 +538,12 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- JS para control del audio -->
+  <script>
+    var audio = document.getElementById("miaudio");
+    audio.volume = 0.3;
+  </script>
 </body>
 
 </html>
