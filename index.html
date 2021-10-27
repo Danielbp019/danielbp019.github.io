@@ -27,6 +27,11 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <!-- Mis reglas -->
+  <link href="assets/css/miregla.css" rel="stylesheet">
+  <!-- Normalize -->
+  <link href="assets/css/normalize.css" rel="stylesheet">
+
 
   <!-- =======================================================
   * Template Name: iPortfolio - v3.5.0
@@ -47,7 +52,6 @@
 
       <div class="profile">
         <img src="assets/img/profile-img.png" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light" style="font-family: 'Alex Brush', cursive;">Daniel Bautista P.</h1>
         <div class="social-links mt-3 text-center">
           <a href="https://github.com/Danielbp019"><i class="bi bi-github"></i></a>
           <a href="https://www.youtube.com/channel/UCuHc9hs5b6Fmhf_4sYFaTIg"><i class="bi bi-youtube"></i></a>
@@ -55,7 +59,9 @@
         </div>
       </div>
 
-      <audio controls id="miaudio">
+      <br>
+
+      <audio id="miaudio" controls>
         <source src="assets/mp3/WeWillRiseAgain.opus" type="audio/ogg">
         <!-- <source src="assets/mp3/FFV-DearFriends-MyHomeSweetHome.opus" type="audio/ogg"> -->
         Este es un elemento de audio no soportado por tu navegador, prueba con otro.
@@ -81,8 +87,7 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
-      <h1 style="font-family: 'Alex Brush', cursive;"> Daniel Bautista
-        P.</h1>
+      <h1 id="miFirma">Daniel Bautista P.</h1>
       <p>Soy <span class="typed" data-typed-items="Desarrollador Web, Gamer, PC Master Race "></span></p>
 
       <!-- ======= 15 luciérnagas ======= -->
@@ -311,7 +316,7 @@
               <li data-filter="*" class="filter-active">Todo</li>
               <li data-filter=".filter-app">App</li>
               <li data-filter=".filter-docs">Documentos</li>
-              <li data-filter=".filter-web">Imagenes</li>
+              <li data-filter=".filter-infos">Imagenes</li>
             </ul>
           </div>
         </div>
@@ -329,7 +334,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-infos">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
               <div class="portfolio-links">
@@ -360,12 +365,12 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-infos">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Web 2"><i class="bi bi-plus-circle"></i></a>
+                  class="portfolio-lightbox" title="infos 2"><i class="bi bi-plus-circle"></i></a>
                 <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
               </div>
             </div>
@@ -377,39 +382,6 @@
               <div class="portfolio-links">
                 <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery"
                   class="portfolio-lightbox" title="App 3"><i class="bi bi-plus-circle"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-docs">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="docs 1"><i class="bi bi-plus-circle"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-docs">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="docs 3"><i class="bi bi-plus-circle"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Web 3"><i class="bi bi-plus-circle"></i></a>
                 <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
               </div>
             </div>
@@ -487,7 +459,7 @@
   <footer id="footer">
     <div class="container">
       <div class="credits">
-        Edición <span style="font-family: 'Alex Brush', cursive; font-size: 26px">Daniel Bautista
+        Edición <span style="font-size: 26px" id="miFirma">Daniel Bautista
           P.</span>
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you purchased the pro version. -->
@@ -550,7 +522,10 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <!-- JS para control del audio -->
+  <!-- JS para control del audio - 
+    1,0 es el volumen más alto (por defecto)
+    0,5 es la mitad del volumen (50%)
+    0.0 Silencio  -->
   <script>
     var audio = document.getElementById("miaudio");
     audio.volume = 0.2;
