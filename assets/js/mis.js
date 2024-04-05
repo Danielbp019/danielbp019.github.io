@@ -9,9 +9,26 @@ audio.volume = 0.2;
 function hideForMobile() {
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
         navigator.userAgent)) {
-        // Hide scan button for Desktop
         document.getElementById('errorbroma').style.display = "none";
     }
 }
-//toggle scanButton for Desktop on page load
 window.onload = hideForMobile;
+
+// Función para mostrar un mensaje de confirmación
+function mostrarConfirmacionGithub() {
+    const confirmacion = confirm("¿Estás seguro de que deseas visitar este enlace?");
+    if (confirmacion) {
+        // Si el usuario confirma, redirige al enlace
+        const url = 'https://github.com/Danielbp019';
+        window.open(url, '_blank');
+    }
+}
+
+// Función para mostrar un mensaje de confirmación
+function mostrarConfirmacionerror() {
+    const confirmacion = confirm("¿Estás seguro de pulsar este botón?");
+    if (confirmacion) {
+        // Si el usuario confirma, redirige al enlace
+        window.location.href = "error.html";
+    }
+}
