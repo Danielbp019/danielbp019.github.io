@@ -26,7 +26,7 @@ function mostrarConfirmacionGithub() {
 
 // Función para mostrar un mensaje de confirmación
 function mostrarConfirmacionerror() {
-    const confirmacion = confirm("¿Estás seguro de pulsar este botón?");
+    const confirmacion = confirm("¿Estás seguro de pulsar este botón? Yo NO lo haria.");
     if (confirmacion) {
         // Si el usuario confirma, redirige al enlace
         window.location.href = "error.html";
