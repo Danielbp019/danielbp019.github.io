@@ -1,4 +1,5 @@
 User-agent: *
-Disallow: /assets/
-Disallow: /error.html
-Disallow: /README.MD
+Disallow: assets/
+Disallow: error.html
+Disallow: README.MD
+Disallow: *.pdf$
