@@ -1,340 +1,674 @@
 <!DOCTYPE html>
 <html lang="es-ES">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="author" content="Daniel M. Bautista P." />
+    <title>Proyecto GD.</title>
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta name="author" content="Daniel M. Bautista P.">
-  <title>Proyecto GD.</title>
+    <!-- Favicons -->
+    <link href="assets/img/candle32x32.png" rel="icon" />
+    <link href="assets/img/candle128x128.png" rel="apple-touch-icon" />
 
-  <!-- Favicons -->
-  <link href="assets/img/candle32x32.png" rel="icon">
-  <link href="assets/img/candle128x128.png" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS Files -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
-  <!-- CSS Files -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
+    <link
+      href="assets/vendor/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
-  <link href="assets/vendor/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <!-- Mis reglas -->
+    <link href="assets/css/miregla.css" rel="stylesheet" />
+    <!-- Normalize -->
+    <link href="assets/css/normalizev8.0.1.css" rel="stylesheet" />
+  </head>
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-  <!-- Mis reglas -->
-  <link href="assets/css/miregla.css" rel="stylesheet">
-  <!-- Normalize -->
-  <link href="assets/css/normalizev8.0.1.css" rel="stylesheet">
-</head>
+  <body>
+    <!-- ======= Mobile nav toggle button ======= -->
+    <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
-<body>
-
-  <!-- ======= Mobile nav toggle button ======= -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
-
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="d-flex flex-column">
-
-      <div class="profile">
-        <img src="assets/img/profile-img.png" class="img-fluid rounded-circle" loading="lazy">
-        <div class="social-links mt-3 text-center">
-          <a id="Migithub" onclick="mostrarConfirmacionGithub()"><i class="bi bi-github"></i></a>
-          <a id="errorbroma" onclick="mostrarConfirmacionerror()" data-toggle="tooltip" title="No lo pulses!"><i
-              class="bi bi-bug"></i></a>
-        </div>
-      </div>
-
-      <hr>
-
-      <audio id="miaudio" controls preload="none">
-        <source src="assets/sounds/FFV-DearFriends-MyHomeSweetHome.opus" type="audio/ogg">
-        Este es un elemento de audio no soportado por tu navegador, prueba con otro.
-      </audio>
-
-      <nav id="navbar" class="nav-menu navbar">
-        <ul>
-          <li><a href="#hero" class="nav-link scrollto active"><i class="bi bi-house-door"></i> <span>Inicio</span></a>
-          </li>
-          <li><a href="#about" class="nav-link scrollto"><i class="bi bi-file-person"></i> <span>Acerca de mi</span></a>
-          </li>
-          <li><a href="#skills" class="nav-link scrollto"><i class="bi bi-star-fill"></i> <span>Habilidades</span></a>
-          </li>
-          <li><a href="#resume" class="nav-link scrollto"><i class="bi bi-book"></i> <span>Educación</span></a>
-          </li>
-          <li><a href="#portfolio" class="nav-link scrollto"><i class="bi bi-terminal"></i> <span>Proyectos</span></a>
-          </li>
-          <li><a href="#services" class="nav-link scrollto"><i class="bi bi-chat-quote"></i> <span>Finalidad</span></a>
-          </li>
-        </ul>
-      </nav><!-- .nav-menu -->
-    </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="hero-container" data-aos="fade-in">
-      <h1 id="miFirma">Daniel M. Bautista Pradilla</h1>
-      <p> <span class="typed" data-typed-items="Analista de desarrollo de software, Entusiasta del PC."></span>
-      </p>
-
-      <!-- ======= 15 luciérnagas ======= -->
-      <div class="firefly"></div>
-      <div class="firefly"></div>
-      <div class="firefly"></div>
-      <div class="firefly"></div>
-      <div class="firefly"></div>
-      <div class="firefly"></div>
-      <div class="firefly"></div>
-      <div class="firefly"></div>
-      <div class="firefly"></div>
-      <div class="firefly"></div>
-      <div class="firefly"></div>
-      <div class="firefly"></div>
-      <div class="firefly"></div>
-      <div class="firefly"></div>
-      <div class="firefly"></div>
-
-    </div>
-  </section><!-- End Hero -->
-
-  <main id="main">
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Acerca de mi</h2>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-12 pt-4 pt-lg-0 content" data-aos="fade-up">
-            <h3>Analista de desarrollo de software</h3>
-            <br>
-
-            <p>Soy tecnólogo en sistemas y he trabajado en algunos proyectos web usando principalmente Laravel (PHP),
-              MySQL /MariaDB, SQL Server, Bootstrap y API REST.</p>
-
-            <p>He creado proyectos partiendo de cero, diseño y codificación; pero también he
-              participado con proyectos ya creados con mucho tiempo de uso editando y corrigiendo problemas. A futuro me
-              gustaría continuar con mi formación profesional ya que los temas de resolución de problemas en informática
-              son muy extensos.
-            </p>
-
-            <p>Fui voluntario en una comunidad digital de ayuda informática (https://buldar.com)
-              durante varios años hasta que la comunidad cerro. Mi objetivo era contribuir a resolver problemas y
-              compartir
-              conocimiento en América Latina de informatica y hardware.</p>
+    <!-- ======= Header ======= -->
+    <header id="header">
+      <div class="d-flex flex-column">
+        <div class="profile">
+          <img
+            src="assets/img/profile-img.png"
+            class="img-fluid rounded-circle"
+            loading="lazy"
+          />
+          <div class="social-links mt-3 text-center">
+            <a id="Migithub" onclick="mostrarConfirmacionGithub()"
+              ><i class="bi bi-github"></i
+            ></a>
+            <a
+              id="errorbroma"
+              onclick="mostrarConfirmacionerror()"
+              data-toggle="tooltip"
+              title="No lo pulses!"
+              ><i class="bi bi-bug"></i
+            ></a>
           </div>
         </div>
 
+        <hr />
+
+        <audio id="miaudio" controls preload="none">
+          <source
+            src="assets/sounds/FFV-DearFriends-MyHomeSweetHome.opus"
+            type="audio/ogg"
+          />
+          Este es un elemento de audio no soportado por tu navegador, prueba con
+          otro.
+        </audio>
+
+        <nav id="navbar" class="nav-menu navbar">
+          <ul>
+            <li>
+              <a href="#hero" class="nav-link scrollto active"
+                ><i class="bi bi-house-door"></i> <span>Inicio</span></a
+              >
+            </li>
+            <li>
+              <a href="#about" class="nav-link scrollto"
+                ><i class="bi bi-file-person"></i> <span>Acerca de mi</span></a
+              >
+            </li>
+            <li>
+              <a href="#skills" class="nav-link scrollto"
+                ><i class="bi bi-star-fill"></i> <span>Habilidades</span></a
+              >
+            </li>
+            <li>
+              <a href="#resume" class="nav-link scrollto"
+                ><i class="bi bi-book"></i> <span>Educación</span></a
+              >
+            </li>
+            <li>
+              <a href="#portfolio" class="nav-link scrollto"
+                ><i class="bi bi-terminal"></i> <span>Proyectos</span></a
+              >
+            </li>
+            <li>
+              <a href="#services" class="nav-link scrollto"
+                ><i class="bi bi-chat-quote"></i> <span>Finalidad</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+        <!-- .nav-menu -->
       </div>
-    </section><!-- End About Section -->
+    </header>
+    <!-- End Header -->
 
-    <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills section-bg">
-      <div class="container">
+    <!-- ======= Hero Section ======= -->
+    <section
+      id="hero"
+      class="d-flex flex-column justify-content-center align-items-center"
+    >
+      <div class="hero-container" data-aos="fade-in">
+        <h1 id="miFirma">Daniel M. Bautista Pradilla</h1>
+        <p>
+          <span
+            class="typed"
+            data-typed-items="Analista de desarrollo de software, Desarrollador de software web ,Entusiasta del PC."
+          ></span>
+        </p>
 
-        <div class="section-title">
-          <h2>Habilidades</h2>
-        </div>
-
-        <div class="row skills-content align-items-center" data-aos="fade-up">
-
-          <table class="table table-borderless">
-            <tr>
-              <td colspan="3">He trabajado con las siguentes tecnologias:</td>
-            </tr>
-            <tr>
-              <td><img src="https://skillicons.dev/icons?i=html" height="40" alt="html5 logo" /> HTML5</td>
-              <td><img src="https://skillicons.dev/icons?i=css" height="40" alt="css3 logo" /> CSS3</td>
-              <td><img src="https://skillicons.dev/icons?i=js" height="40" alt="javascript logo" /> Javascript</td>
-            </tr>
-            <tr>
-              <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" height="40"
-                  alt="php logo" /> PHP</td>
-              <td><img src="https://skillicons.dev/icons?i=laravel" height="40" alt="laravel logo" /> Laravel</td>
-              <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg"
-                  height="40" alt="mysql logo" /> Mysql</td>
-            </tr>
-            <tr>
-              <td><img src="https://skillicons.dev/icons?i=bootstrap" height="40" alt="bootstrap logo" /> Bootstrap</td>
-              <td><img src="https://skillicons.dev/icons?i=jquery" height="40" alt="jquery logo" /> Jquery</td>
-              <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/composer/composer-original.svg"
-                  height="40" alt="composer logo" /> Composer</td>
-            </tr>
-            <tr>
-              <td><img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain-wordmark.svg"
-                  height="40" alt="microsoftsqlserver logo" />SQL Server</td>
-              <td><img src="https://skillicons.dev/icons?i=github" height="40" alt="github logo" /> Github</td>
-              <td><img src="https://skillicons.dev/icons?i=git" height="40" alt="git logo" /> Git</td>
-            </tr>
-            <tr>
-              <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuetify/vuetify-original.svg" height="40"
-                  alt="vuetify logo" /> Vuetify</td>
-              <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="40"
-                  alt="nodejs logo" /> Nodejs</td>
-              <td></td>
-            </tr>
-          </table>
-
-        </div><!-- ======= end ======= -->
+        <!-- ======= 15 luciérnagas ======= -->
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
       </div>
-    </section><!-- End Skills Section -->
+    </section>
+    <!-- End Hero -->
 
-    <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume">
-      <div class="container">
+    <main id="main">
+      <!-- ======= About Section ======= -->
+      <section id="about" class="about">
+        <div class="container">
+          <div class="section-title">
+            <h2>Acerca de mi</h2>
+          </div>
 
-        <div class="section-title">
-          <h2>Educación y Experiencia profesional</h2>
+          <div class="row">
+            <div class="col-lg-12 pt-4 pt-lg-0 content" data-aos="fade-up">
+              <h3>Analista y desarrollador de software web</h3>
+              <br />
+
+              <p>
+                Tecnólogo en sistemas con experiencia en desarrollo y
+                mantenimiento de aplicaciones web, especializado en Laravel
+                (PHP), bases de datos MySQL/MariaDB y Bootstrap.
+              </p>
+
+              <p>
+                He liderado proyectos desde su concepción, diseñando y
+                codificando soluciones adaptadas a las necesidades del cliente,
+                y también he intervenido en proyectos consolidados, optimizando
+                su funcionalidad y resolviendo problemas.
+              </p>
+
+              <p>
+                Mi enfoque se centra en la calidad del código y en ofrecer
+                experiencias de usuario eficaces y seguras. Me motiva crear
+                soluciones que evolucionen junto con los objetivos de negocio y
+                aporten un valor sostenido en el tiempo.
+              </p>
+
+              <p>
+                Fui voluntario en una comunidad digital de ayuda informática
+                (https://buldar.com) durante varios años hasta que la comunidad
+                cerro. Mi objetivo era contribuir a resolver problemas y
+                compartir conocimiento en América Latina de informatica y
+                hardware.
+              </p>
+            </div>
+          </div>
         </div>
+      </section>
+      <!-- End About Section -->
 
-        <div class="row">
-          <div class="col-lg-6" data-aos="fade-up">
+      <!-- ======= Skills Section ======= -->
+      <section id="skills" class="skills section-bg">
+        <div class="container">
+          <div class="section-title">
+            <h2>Habilidades</h2>
+          </div>
 
-            <h3 class="resume-title">Educación</h3>
-            <div class="resume-item">
-              <h4>Tecnólogo en Sistemas</h4>
-              <h5>2012</h5>
-              <p><em>Fundación Tecnológica FITEC, Bucaramanga / Colombia.</em></p>
+          <div class="row skills-content align-items-center" data-aos="fade-up">
+            <table class="table table-borderless">
+              <tr>
+                <td colspan="3">He trabajado con las siguentes tecnologias:</td>
+              </tr>
+              <tr>
+                <td>
+                  <img
+                    src="https://skillicons.dev/icons?i=html"
+                    height="40"
+                    alt="html5 logo"
+                  />
+                  HTML5
+                </td>
+                <td>
+                  <img
+                    src="https://skillicons.dev/icons?i=css"
+                    height="40"
+                    alt="css3 logo"
+                  />
+                  CSS3
+                </td>
+                <td>
+                  <img
+                    src="https://skillicons.dev/icons?i=js"
+                    height="40"
+                    alt="javascript logo"
+                  />
+                  Javascript
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+                    height="40"
+                    alt="php logo"
+                  />
+                  PHP
+                </td>
+                <td>
+                  <img
+                    src="https://skillicons.dev/icons?i=laravel"
+                    height="40"
+                    alt="laravel logo"
+                  />
+                  Laravel
+                </td>
+                <td>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg"
+                    height="40"
+                    alt="mysql logo"
+                  />
+                  Mysql
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img
+                    src="https://skillicons.dev/icons?i=bootstrap"
+                    height="40"
+                    alt="bootstrap logo"
+                  />
+                  Bootstrap
+                </td>
+                <td>
+                  <img
+                    src="https://skillicons.dev/icons?i=jquery"
+                    height="40"
+                    alt="jquery logo"
+                  />
+                  Jquery
+                </td>
+                <td>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/composer/composer-original.svg"
+                    height="40"
+                    alt="composer logo"
+                  />
+                  Composer
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain-wordmark.svg"
+                    height="40"
+                    alt="microsoftsqlserver logo"
+                  />SQL Server
+                </td>
+                <td>
+                  <img
+                    src="https://skillicons.dev/icons?i=github"
+                    height="40"
+                    alt="github logo"
+                  />
+                  Github
+                </td>
+                <td>
+                  <img
+                    src="https://skillicons.dev/icons?i=git"
+                    height="40"
+                    alt="git logo"
+                  />
+                  Git
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuetify/vuetify-original.svg"
+                    height="40"
+                    alt="vuetify logo"
+                  />
+                  Vuetify
+                </td>
+                <td>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                    height="40"
+                    alt="nodejs logo"
+                  />
+                  Nodejs
+                </td>
+                <td></td>
+              </tr>
+            </table>
+          </div>
+          <!-- ======= end ======= -->
+        </div>
+      </section>
+      <!-- End Skills Section -->
+
+      <!-- ======= Resume Section ======= -->
+      <section id="resume" class="resume">
+        <div class="container">
+          <div class="section-title">
+            <h2>Educación y Experiencia profesional</h2>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6" data-aos="fade-up">
+              <h3 class="resume-title">Educación</h3>
+              <div class="resume-item">
+                <h4>Tecnólogo en Sistemas</h4>
+                <h5>2012</h5>
+                <p>
+                  <em>Fundación Tecnológica FITEC, Bucaramanga / Colombia.</em>
+                </p>
+              </div>
+
+              <div class="resume-item">
+                <h4>Bachiller Comercial con énfasis en contabilidad</h4>
+                <h5>2007</h5>
+                <p>
+                  <em>INEM Custodio García Rovira, Bucaramanga / Colombia.</em>
+                </p>
+              </div>
+
+              <h4 class="resume-title">Otro</h4>
+              <div class="resume-item">
+                <h4>Curso Básico De Marketing Digital</h4>
+                <h5>2017</h5>
+                <p><em>IAB Spain y Google.</em></p>
+              </div>
+
+              <div class="resume-item">
+                <h4>Auditoria Informática: Conceptualización</h4>
+                <h5>2017</h5>
+                <p><em>Servicio Nacional de Aprendizaje SENA, Colombia.</em></p>
+              </div>
+
+              <div class="resume-item">
+                <h4>Manejo De Herramientas Microsoft Office 2010: Excel</h4>
+                <h5>2013</h5>
+                <p><em>Servicio Nacional de Aprendizaje SENA, Colombia.</em></p>
+              </div>
+
+              <div class="resume-item">
+                <h4>
+                  Fundamentación De Ensamble Y Mantenimiento De Computadores
+                  Para Los Procesos De Soporte Técnico
+                </h4>
+                <h5>2013</h5>
+                <p><em>Servicio Nacional de Aprendizaje SENA, Colombia.</em></p>
+              </div>
             </div>
 
-            <div class="resume-item">
-              <h4>Bachiller Comercial con énfasis en contabilidad</h4>
-              <h5>2007</h5>
-              <p><em>INEM Custodio García Rovira, Bucaramanga / Colombia.</em></p>
-            </div>
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <h3 class="resume-title">Experiencia profesional</h3>
 
-            <h4 class="resume-title">Otro</h4>
-            <div class="resume-item">
-              <h4>Curso Básico De Marketing Digital</h4>
-              <h5>2017</h5>
-              <p><em>IAB Spain y Google.</em></p>
-            </div>
+              <div class="resume-item">
+                <h4>Disfarma GC S.A.S</h4>
+                <h5>2022 - 2023</h5>
+                <p><em>Analista de desarrollo de software</em></p>
+                <ul>
+                  <li>
+                    Migré aplicaciones escritas en PHP nativo al ERP de la
+                    compañía hecho en Laravel.
+                  </li>
+                  <li>
+                    Corregí el sistema de envío de emails, incluyendo el formato
+                    de los mismos.
+                  </li>
+                  <li>
+                    Implementé un sistema de borrado físico y lógico de
+                    adjuntos.
+                  </li>
+                  <li>Creé una API REST de consulta.</li>
+                  <li>
+                    Realicé diversos movimientos en la base de datos de forma
+                    manual.
+                  </li>
+                  <li>
+                    Brindé soporte técnico para resolver dificultades internas
+                    de la compañía.
+                  </li>
+                  <li>
+                    Arreglé y corregí bugs en diversas partes de otras
+                    aplicaciones.
+                  </li>
+                </ul>
+              </div>
 
-            <div class="resume-item">
-              <h4>Auditoria Informática: Conceptualización</h4>
-              <h5>2017</h5>
-              <p><em>Servicio Nacional de Aprendizaje SENA, Colombia.</em></p>
-            </div>
+              <div class="resume-item">
+                <h4>Espigas S.A E.S.P</h4>
+                <h5>2013 - 2014</h5>
+                <p><em>Desarrollador web</em></p>
+                <ul>
+                  <li>
+                    Back-end y Front-end (Monolítico) de un sistema de quejas y
+                    reclamos.
+                  </li>
+                  <li>Diseño de la base de datos en MySQL/MariaDB.</li>
+                  <li>Creación de los manuales de usuario.</li>
+                </ul>
+                <h5>2016</h5>
+                <ul>
+                  <li>
+                    Actualización del sistema de quejas y reclamos según las
+                    leyes colombianas.
+                  </li>
+                  <li>Creación de un sistema de reportes de emergencia.</li>
+                  <li>Actualización de los manuales de usuario.</li>
+                </ul>
+                <h5>2024 (Iniciativa Personal, sin pedido del cliente)</h5>
+                <ul>
+                  <li>Función para tratamiento de texto basada en ucfirst.</li>
+                  <li>
+                    Función de autocompletar dos o más campos basándose en la
+                    identificación del usuario con validación de token CSRF.
+                  </li>
+                  <li>
+                    Función para realizar subidas y descargas de archivos CSV.
+                  </li>
+                </ul>
+              </div>
 
-            <div class="resume-item">
-              <h4>Manejo De Herramientas Microsoft Office 2010: Excel</h4>
-              <h5>2013</h5>
-              <p><em>Servicio Nacional de Aprendizaje SENA, Colombia.</em></p>
+              <div class="resume-item">
+                <h4>Fundación Tecnológica FITEC</h4>
+                <h5>2018</h5>
+                <p><em>Centro de contacto, Infraestructura</em></p>
+                <ul>
+                  <li>
+                    Atención de incidencias y mantenimiento de todos los equipos
+                    informáticos del plantel.
+                  </li>
+                </ul>
+              </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Resume Section -->
 
-            <div class="resume-item">
-              <h4>Fundamentación De Ensamble Y Mantenimiento De Computadores Para Los Procesos De Soporte Técnico</h4>
-              <h5>2013</h5>
-              <p><em>Servicio Nacional de Aprendizaje SENA, Colombia.</em></p>
+      <!-- ======= Portfolio Section ======= -->
+      <section id="portfolio" class="portfolio section-bg">
+        <div class="container">
+          <div class="section-title">
+            <h2>Proyectos, documentos e imágenes.</h2>
+          </div>
+
+          <div class="row" data-aos="fade-up">
+            <div class="col-lg-12 d-flex justify-content-center">
+              <ul id="portfolio-flters">
+                <li data-filter="*" class="filter-active">Todo</li>
+                <li data-filter=".filter-Proyectos">Proyectos</li>
+                <li data-filter=".filter-docs">Documentos</li>
+                <li data-filter=".filter-infos">Imagenes</li>
+              </ul>
             </div>
           </div>
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Experiencia profesional</h3>
-
-            <div class="resume-item">
-              <h4>Disfarma GC S.A.S</h4>
-              <h5>2022 - 2023</h5>
-              <p><em>Analista de desarrollo de software</em></p>
-              <ul>
-                <li>Migré aplicaciones escritas en PHP nativo al ERP de la compañía hecho en Laravel.</li>
-                <li>Corregí el sistema de envío de emails, incluyendo el formato de los mismos.</li>
-                <li>Implementé un sistema de borrado físico y lógico de adjuntos.</li>
-                <li>Creé una API REST de consulta.</li>
-                <li>Realicé diversos movimientos en la base de datos de forma manual.</li>
-                <li>Brindé soporte técnico para resolver dificultades internas de la compañía.</li>
-                <li>Arreglé y corregí bugs en diversas partes de otras aplicaciones.</li>
-              </ul>
-            </div>
-
-            <div class="resume-item">
-              <h4>Espigas S.A E.S.P</h4>
-              <h5>2013 - 2014</h5>
-              <p><em>Desarrollador web</em></p>
-              <ul>
-                <li>Back-end y Front-end (Monolítico) de un sistema de quejas y reclamos.</li>
-                <li>Diseño de la base de datos en MySQL/MariaDB.</li>
-                <li>Creación de los manuales de usuario.</li>
-              </ul>
-              <h5>2016</h5>
-              <ul>
-                <li>Actualización del sistema de quejas y reclamos según las leyes colombianas.</li>
-                <li>Creación de un sistema de reportes de emergencia.</li>
-                <li>Actualización de los manuales de usuario.</li>
-              </ul>
-              <h5>2024 (Iniciativa Personal, sin pedido del cliente)</h5>
-              <ul>
-                <li>Función para tratamiento de texto basada en ucfirst.</li>
-                <li>Función de autocompletar dos o más campos basándose en la identificación del usuario con validación
-                  de token CSRF.</li>
-                <li>Función para realizar subidas y descargas de archivos CSV.</li>
-              </ul>
-            </div>
-
-            <div class="resume-item">
-              <h4>Fundación Tecnológica FITEC</h4>
-              <h5>2018</h5>
-              <p><em>Centro de contacto, Infraestructura</em></p>
-              <ul>
-                <li>Atención de incidencias y mantenimiento de todos los equipos informáticos del plantel.</li>
-              </ul>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Resume Section -->
-
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Proyectos, documentos e imágenes.</h2>
-        </div>
-
-        <div class="row" data-aos="fade-up">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">Todo</li>
-              <li data-filter=".filter-Proyectos">Proyectos</li>
-              <li data-filter=".filter-docs">Documentos</li>
-              <li data-filter=".filter-infos">Imagenes</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-infos">
-            <div class="portfolio-wrap">
-              <div class="card mb-3" style="max-width: 540px; height: 200px;">
-                <div class="row g-0">
-                  <div class="col-md-4 d-flex align-items-center justify-content-center">
-                    <img src="assets/img/portfolio/wip800-600.png" class="img-fluid rounded-start">
+          <div
+            class="row portfolio-container"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="col-lg-4 col-md-6 portfolio-item filter-infos">
+              <div class="portfolio-wrap">
+                <div class="card mb-3" style="max-width: 540px; height: 200px">
+                  <div class="row g-0">
+                    <div
+                      class="col-md-4 d-flex align-items-center justify-content-center"
+                    >
+                      <img
+                        src="assets/img/portfolio/wip800-600.png"
+                        class="img-fluid rounded-start"
+                      />
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">
+                          Infografia de tipos de agarre
+                        </h5>
+                        <p class="card-text">
+                          Se explica los tipos de agarre de mouse para realizar
+                          compras informadas.
+                        </p>
+                        <div class="portfolio-links">
+                          <a href="assets/img/portfolio/wip.png" target="_blank"
+                            ><i class="bi bi-link"></i
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Infografia de tipos de agarre</h5>
-                      <p class="card-text">Se explica los tipos de agarre de mouse para realizar compras informadas.</p>
-                      <div class="portfolio-links">
-                        <a href="assets/img/portfolio/wip.png" target="_blank"><i class="bi bi-link"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-docs">
+              <div class="portfolio-wrap">
+                <div class="card mb-3" style="max-width: 540px; height: 200px">
+                  <div class="row g-0">
+                    <div
+                      class="col-md-4 d-flex align-items-center justify-content-center"
+                    >
+                      <img
+                        src="assets/img/portfolio/pdf256x256.png"
+                        class="img-fluid rounded-start"
+                      />
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Guía de creación de macros</h5>
+                        <p class="card-text">
+                          Se explica como crear macros usando el lenguaje de
+                          macros y las opciones disponibles para el código.
+                        </p>
+                        <div class="portfolio-links">
+                          <a
+                            href="assets/pdf/MisamigasmacrosWoW.pdf"
+                            target="_blank"
+                            ><i class="bi bi-link"></i
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-docs">
+              <div class="portfolio-wrap">
+                <div class="card mb-3" style="max-width: 540px; height: 200px">
+                  <div class="row g-0">
+                    <div
+                      class="col-md-4 d-flex align-items-center justify-content-center"
+                    >
+                      <img
+                        src="assets/img/portfolio/pdf256x256.png"
+                        class="img-fluid rounded-start"
+                      />
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">
+                          Explicación de opciones gráficas
+                        </h5>
+                        <p class="card-text">
+                          Se explican las opciones gráficas presentes en motores
+                          de videojuegos y filtros.
+                        </p>
+                        <div class="portfolio-links">
+                          <a
+                            href="assets/pdf/Compendiodeopcionesgraficas.pdf"
+                            target="_blank"
+                            ><i class="bi bi-link"></i
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-Proyectos">
+              <div class="portfolio-wrap">
+                <div class="card mb-3" style="max-width: 540px; height: 200px">
+                  <div class="row g-0">
+                    <div
+                      class="col-md-4 d-flex align-items-center justify-content-center"
+                    >
+                      <img
+                        src="assets/img/portfolio/github256.png"
+                        class="img-fluid rounded-start"
+                      />
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Mi Github</h5>
+                        <p class="card-text">Aquí está todo mi código hecho.</p>
+                        <div class="portfolio-links">
+                          <a
+                            href="https://github.com/Danielbp019"
+                            target="_blank"
+                            ><i class="bi bi-link"></i
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-Proyectos">
+              <div class="portfolio-wrap">
+                <div class="card mb-3" style="max-width: 540px; height: 200px">
+                  <div class="row g-0">
+                    <div
+                      class="col-md-4 d-flex align-items-center justify-content-center"
+                    >
+                      <img
+                        src="assets/img/portfolio/page_coding256.png"
+                        class="img-fluid rounded-start"
+                      />
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">
+                          Calculadora de Consumo Eléctrico
+                        </h5>
+                        <p class="card-text">
+                          Este proyecto calcula el costo de funcionamiento de
+                          artículos electrónicos.
+                        </p>
+                        <div class="portfolio-links">
+                          <a href="https://consumow.pages.dev" target="_blank"
+                            ><i class="bi bi-link"></i
+                          ></a>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -342,172 +676,108 @@
               </div>
             </div>
           </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-docs">
-            <div class="portfolio-wrap">
-              <div class="card mb-3" style="max-width: 540px; height: 200px;">
-                <div class="row g-0">
-                  <div class="col-md-4 d-flex align-items-center justify-content-center">
-                    <img src="assets/img/portfolio/pdf256x256.png" class="img-fluid rounded-start">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Guía de creación de macros</h5>
-                      <p class="card-text">Se explica como crear macros usando el lenguaje de macros y las opciones
-                        disponibles para el código.
-                      </p>
-                      <div class="portfolio-links">
-                        <a href="assets/pdf/MisamigasmacrosWoW.pdf" target="_blank"><i class="bi bi-link"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-docs">
-            <div class="portfolio-wrap">
-              <div class="card mb-3" style="max-width: 540px; height: 200px;">
-                <div class="row g-0">
-                  <div class="col-md-4 d-flex align-items-center justify-content-center">
-                    <img src="assets/img/portfolio/pdf256x256.png" class="img-fluid rounded-start">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Explicación de opciones gráficas</h5>
-                      <p class="card-text">Se explican las opciones gráficas presentes en motores de videojuegos y
-                        filtros.
-                      </p>
-                      <div class="portfolio-links">
-                        <a href="assets/pdf/Compendiodeopcionesgraficas.pdf" target="_blank"><i
-                            class="bi bi-link"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-Proyectos">
-            <div class="portfolio-wrap">
-              <div class="card mb-3" style="max-width: 540px; height: 200px;">
-                <div class="row g-0">
-                  <div class="col-md-4 d-flex align-items-center justify-content-center">
-                    <img src="assets/img/portfolio/github256.png" class="img-fluid rounded-start">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Mi Github</h5>
-                      <p class="card-text">Aquí está todo mi código hecho.
-                      </p>
-                      <div class="portfolio-links">
-                        <a href="https://github.com/Danielbp019" target="_blank"><i class="bi bi-link"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-Proyectos">
-            <div class="portfolio-wrap">
-              <div class="card mb-3" style="max-width: 540px; height: 200px;">
-                <div class="row g-0">
-                  <div class="col-md-4 d-flex align-items-center justify-content-center">
-                    <img src="assets/img/portfolio/page_coding256.png" class="img-fluid rounded-start">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Calculadora de Consumo Eléctrico</h5>
-                      <p class="card-text">Este proyecto calcula el costo de funcionamiento de artículos electrónicos.
-                      </p>
-                      <div class="portfolio-links">
-                        <a href="https://consumow.pages.dev" target="_blank"><i class="bi bi-link"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
-      </div>
-    </section><!-- End Portfolio Section -->
+      </section>
+      <!-- End Portfolio Section -->
 
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
-      <div class="container">
+      <!-- ======= Services Section ======= -->
+      <section id="services" class="services">
+        <div class="container">
+          <div class="section-title">
+            <h2>Finalidad</h2>
+            <p>La finalidad de este sitio web se puede dividir en partes.</p>
+          </div>
 
-        <div class="section-title">
-          <h2>Finalidad</h2>
-          <p>La finalidad de este sitio web se puede dividir en partes.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-            <div class="icon"><i class="bi bi-sunglasses"></i></div>
-            <h4 class="title"><a href="">Presentación</a></h4>
-            <p class="description">Hola! este soy yo o al menos una parte de mi y de lo que puedo llegar a hacer.
-            </p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon"><i class="bi bi-card-checklist"></i></div>
-            <h4 class="title"><a href="">Esta Web</a></h4>
-            <p class="description">La idea de esta web viene de mucho antes del 2014, cuando no tenía casi ningún
-              conocimiento de este mundo. A lo largo del tiempo el contenido y el enfoque ha cambiado mucho.
-            </p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon"><i class="bi bi-patch-question"></i></div>
-            <h4 class="title"><a href="">Curiosidad</a></h4>
-            <p class="description">Simplemente sentía curiosidad de lo que eran las github pages y lo que podían hacer,
-              así que me anime a probar a la par de que aprendía a usar el cliente de git en escritorio.
-            </p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon"><i class="bi bi-journal-text"></i></div>
-            <h4 class="title"><a href="">Escritos</a></h4>
-            <p class="description">Este es un sitio bueno para subir mis escritos y diversas cosas más. La razón detrás
-              de esto es que es muy difícil encontrar cierta información de algunos temas pues mucha información se
-              suele superponer a los temas más técnicos y dificulta mucho encontrar estas cosas.
-            </p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-            <div class="icon"><i class="bi bi-mouse2"></i></div>
-            <h4 class="title"><a href="">Demostración</a></h4>
-            <p class="description">Quería mostrar un poco de lo que puedo hacer y mostrarlo. Ya que
-              este alojamiento no soporta códigos más avanzados de programación me pareció una muy buena idea para
-              mostrar un nivel inicial.
-            </p>
+          <div class="row">
+            <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+              <div class="icon"><i class="bi bi-sunglasses"></i></div>
+              <h4 class="title"><a href="">Presentación</a></h4>
+              <p class="description">
+                Hola! este soy yo o al menos una parte de mi y de lo que puedo
+                llegar a hacer.
+              </p>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 icon-box"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="icon"><i class="bi bi-card-checklist"></i></div>
+              <h4 class="title"><a href="">Esta Web</a></h4>
+              <p class="description">
+                La idea de esta web viene de mucho antes del 2014, cuando no
+                tenía casi ningún conocimiento de este mundo. A lo largo del
+                tiempo el contenido y el enfoque ha cambiado mucho.
+              </p>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 icon-box"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="icon"><i class="bi bi-patch-question"></i></div>
+              <h4 class="title"><a href="">Curiosidad</a></h4>
+              <p class="description">
+                Simplemente sentía curiosidad de lo que eran las github pages y
+                lo que podían hacer, así que me anime a probar a la par de que
+                aprendía a usar el cliente de git en escritorio.
+              </p>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 icon-box"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="icon"><i class="bi bi-journal-text"></i></div>
+              <h4 class="title"><a href="">Escritos</a></h4>
+              <p class="description">
+                Este es un sitio bueno para subir mis escritos y diversas cosas
+                más. La razón detrás de esto es que es muy difícil encontrar
+                cierta información de algunos temas pues mucha información se
+                suele superponer a los temas más técnicos y dificulta mucho
+                encontrar estas cosas.
+              </p>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 icon-box"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="icon"><i class="bi bi-mouse2"></i></div>
+              <h4 class="title"><a href="">Demostración</a></h4>
+              <p class="description">
+                Quería mostrar un poco de lo que puedo hacer y mostrarlo. Ya que
+                este alojamiento no soporta códigos más avanzados de
+                programación me pareció una muy buena idea para mostrar un nivel
+                inicial.
+              </p>
+            </div>
           </div>
         </div>
+      </section>
+      <!-- End Services Section -->
+      <br />
+    </main>
+    <!-- End #main -->
 
-      </div>
-    </section><!-- End Services Section -->
-    <br>
-  </main><!-- End #main -->
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/typed.js/typed.min.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-  <!-- Mis ajustes -->
-  <script src="assets/js/mis.js"></script>
-
-</body>
-
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <!-- Mis ajustes -->
+    <script src="assets/js/mis.js"></script>
+  </body>
 </html>
