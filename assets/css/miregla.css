@@ -64,7 +64,7 @@ body {
 }
 
 .firefly::before {
-  /* Marca un punto central en la imagen y tambien es el color apgado de las luciernagas. */
+  /* Marca un punto central en la imagen y tambien es el color apagado de las luciernagas. */
   background: #0f1c34;
   opacity: 0.4;
   animation: drift ease alternate infinite;
