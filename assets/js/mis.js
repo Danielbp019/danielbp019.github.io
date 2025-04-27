@@ -1,11 +1,11 @@
-/* Volumen de la musica
+/* Volumen de la música
 1,0 es el volumen más alto (por defecto)
 0,5 es la mitad del volumen (50%)
 0.0 Silencio */
 var audio = document.getElementById("miaudio");
 audio.volume = 0.2;
 
-// Esconder elemento por id si el navegador es movil
+// Esconder elemento por id si el navegador es móvil
 function hideForMobile() {
   if (
     /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
@@ -18,7 +18,7 @@ function hideForMobile() {
 window.onload = hideForMobile;
 
 // Función para mostrar el modal de confirmación de GitHub
-function mostrarConfirmacionGithub() {
+function mostrarConfirmaciongithub() {
   const modal = new bootstrap.Modal(document.getElementById("modalGithub"));
   modal.show();
 
