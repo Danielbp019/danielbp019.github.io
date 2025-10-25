@@ -40,7 +40,7 @@ h6 {
 }
 
 .card-img-top {
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .card-title {
@@ -74,6 +74,18 @@ h6 {
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* Para distribuir el contenido */
+}
+
+/* Animación hover para las tarjetas del portafolio */
+.portfolio-item .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Corrige el defecto visual en los bordes superiores */
+}
+
+.portfolio-item .card:hover {
+  transform: translateY(-10px);
+  /* Usamos la sombra estándar de Bootstrap para un look consistente */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 
 /*--------------------------------------------------------------
