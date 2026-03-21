@@ -110,7 +110,7 @@
         scrollto(this.hash);
       }
     },
-    true
+    true,
   );
 
   /**
@@ -123,23 +123,6 @@
       }
     }
   });
-
-  /**
-   * Hero type effect
-   */
-  const typed = select(".typed");
-  if (typed) {
-    let typed_strings = typed.getAttribute("data-typed-items");
-    typed_strings = typed_strings.split(",");
-    new Typed(".typed", {
-      strings: typed_strings,
-      loop: true,
-      // Tiempo representado en milisegundos
-      typeSpeed: 50,
-      backSpeed: 30,
-      backDelay: 1500,
-    });
-  }
 
   /**
    * Porfolio isotope and filter
@@ -170,7 +153,7 @@
             AOS.refresh();
           });
         },
-        true
+        true,
       );
     }
   });
@@ -180,23 +163,6 @@
    */
   const portfolioLightbox = GLightbox({
     selector: ".portfolio-lightbox",
-  });
-
-  /**
-   * Portfolio details slider
-   */
-  new Swiper(".portfolio-details-slider", {
-    speed: 400,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      type: "bullets",
-      clickable: true,
-    },
   });
 
   /**

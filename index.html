@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Daniel M. Bautista Pradilla" />
-    <title>Proyecto CV</title>
+    <title>Daniel Bautista – Portafolio</title>
 
     <!-- Orden lógico de carga para optimizar: fuentes → CSS → JS → propios. -->
 
@@ -44,8 +44,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="assets/vendor/aos/aos.css" />
     <link rel="stylesheet" href="assets/vendor/glightbox/css/glightbox.min.css" />
-    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="assets/css/style-min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/luciernagas.css" />
 
     <!-- Bootstrap Bundle (JS) - Defer para cargarlo luego -->
@@ -62,15 +61,8 @@
     <script defer src="assets/vendor/glightbox/js/glightbox.min.js"></script>
     <!-- Animación y reordenamiento de los elementos de la galería -->
     <script defer src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <!-- Navegación entre imágenes de la galería -->
-    <script defer src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <!-- Animación de tipear -->
-    <script defer src="assets/vendor/typed.js/typed.min.js"></script>
-    <!-- Animación de Presentación del texto -->
-    <script defer src="assets/vendor/waypoints/noframework.waypoints.js"></script>
     <!-- JS principal -->
     <script defer src="assets/js/main.js"></script>
-    <script defer src="assets/js/mis.js"></script>
     <script defer src="assets/js/luciernagas.js"></script>
   </head>
 
@@ -80,7 +72,7 @@
     <!-- ======= Header ======= -->
     <header id="header">
       <div class="d-flex flex-column">
-        <!-- Botones de git y error con el modal -->
+        <!-- Redes sociales -->
         <div class="profile">
           <img
             src="assets/img/profile-img.png"
@@ -89,95 +81,33 @@
             loading="lazy"
           />
           <div class="social-links mt-3 text-center">
-            <button
+            <a
+              href="https://github.com/Danielbp019"
+              target="_blank"
+              rel="noopener noreferrer"
               class="btn btn-link text-white"
-              onclick="mostrarConfirmaciongithub()"
               aria-label="Ir a mi perfil de GitHub"
               data-bs-toggle="tooltip"
               data-bs-placement="top"
-              title="Ir a GitHub"
+              title="GitHub"
             >
               <i class="bi bi-github" aria-hidden="true"></i>
-            </button>
-            <button
-              id="errorbroma"
+            </a>
+            <a
+              href="https://www.linkedin.com/in/danielm-bautistapradilla/"
+              target="_blank"
+              rel="noopener noreferrer"
               class="btn btn-link text-white"
-              onclick="mostrarConfirmacionerror()"
-              aria-label="Activar broma de pantalla azul"
+              aria-label="Ir a mi perfil de LinkedIn"
               data-bs-toggle="tooltip"
               data-bs-placement="top"
-              title="No lo pulses!"
+              title="LinkedIn"
             >
-              <i class="bi bi-bug" aria-hidden="true"></i>
-            </button>
-          </div>
-        </div>
-        <!-- Modal de Confirmación para GitHub -->
-        <div class="modal fade" id="modalGithub" tabindex="-1" aria-labelledby="modalGithubLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="modalGithubLabel">Confirmación</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-              </div>
-              <div class="modal-body">¿Estás seguro de que deseas visitar este enlace?</div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-primary" id="confirmarGithub">Sí, continuar</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modal de Confirmación para Error -->
-        <div class="modal fade" id="modalError" tabindex="-1" aria-labelledby="modalErrorLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="modalErrorLabel">Advertencia</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-              </div>
-              <div class="modal-body">¿Estás seguro de pulsar este botón? Yo NO lo haría.</div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-danger" id="confirmarError">Sí, continuar</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modal para Infografía -->
-        <div
-          class="modal fade"
-          id="modalInfografia"
-          tabindex="-1"
-          aria-labelledby="modalInfografiaLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog modal-dialog-centered modal-xl">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="modalInfografiaLabel">Infografía de tipos de agarre</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-              </div>
-              <div class="modal-body text-center">
-                <img
-                  src="assets/img/portfolio/wip.png"
-                  class="img-fluid"
-                  alt="Infografía de tipos de agarre"
-                  width="1431"
-                  height="995"
-                />
-              </div>
-            </div>
+              <i class="bi bi-linkedin" aria-hidden="true"></i>
+            </a>
           </div>
         </div>
         <hr />
-
-        <audio id="miaudio" controls preload="none">
-          <source src="assets/sounds/EchoesintheQuiet.opus" type="audio/ogg" />
-          Este es un elemento de audio no soportado por tu navegador, prueba con otro.
-        </audio>
 
         <nav id="navbar" class="nav-menu navbar">
           <ul>
@@ -192,8 +122,8 @@
               >
             </li>
             <li>
-              <a href="#resume" class="nav-link scrollto"
-                ><i class="bi bi-book" aria-hidden="true"></i> <span>Educación y Experiencia</span></a
+              <a href="#skills" class="nav-link scrollto"
+                ><i class="bi bi-tools" aria-hidden="true"></i> <span>Tecnologías</span></a
               >
             </li>
             <li>
@@ -213,10 +143,7 @@
       <div class="hero-container" data-aos="fade-in">
         <h1 id="miFirma">Daniel M. Bautista Pradilla</h1>
         <p>
-          <span
-            class="typed"
-            data-typed-items="Desarrollador web Full Stack"
-          ></span>
+          <span>Desarrollador web Full Stack</span>
         </p>
 
         <!-- ======= Luciérnagas (El numero del array es la cantidad) ======= -->
@@ -253,127 +180,146 @@
       </section>
       <!-- End About Section -->
 
-      <!-- ======= Resume Section ======= -->
-      <section id="resume" class="resume">
+      <!-- ======= Skills Section ======= -->
+      <section id="skills" class="skills">
         <div class="container">
           <div class="section-title">
-            <h2>Educación y Experiencia profesional</h2>
+            <h2>Tecnologías</h2>
           </div>
 
-          <div class="row">
-            <div class="col-lg-6" data-aos="fade-up">
-              <h3 class="resume-title">Educación</h3>
-              <div class="resume-item">
-                <h4>Tecnólogo en Sistemas</h4>
-                <h5>2012</h5>
-                <p>
-                  <em>Fundación Tecnológica FITEC, Bucaramanga / Colombia.</em>
-                </p>
-              </div>
-
-              <div class="resume-item">
-                <h4>Bachiller Comercial con énfasis en contabilidad</h4>
-                <h5>2007</h5>
-                <p>
-                  <em>INEM Custodio García Rovira, Bucaramanga / Colombia.</em>
-                </p>
-              </div>
-
-              <h4 class="resume-title">Otro</h4>
-              <div class="resume-item">
-                <h4>Iniciación al desarrollo con IA</h4>
-                <h5>2025</h5>
-                <p><em>Big School.</em></p>
-              </div>
-
-              <div class="resume-item">
-                <h4>Introducción a la Nube y Servicios de AWS</h4>
-                <h5>2024</h5>
-                <p><em>AWS Educate + Tidwit.</em></p>
-              </div>
-
-              <div class="resume-item">
-                <h4>AZ-900: MICROSOFT AZURE FUNDAMENTALS Y DESARROLLO EN PYTHON</h4>
-                <h5>2022</h5>
-                <p><em>Programa YA - Misión TIC 2022.</em></p>
-              </div>
-
-              <div class="resume-item">
-                <h4>Curso Básico De Marketing Digital</h4>
-                <h5>2017</h5>
-                <p><em>IAB Spain y Google.</em></p>
-              </div>
-
-              <div class="resume-item">
-                <h4>Manejo De Herramientas Microsoft Office 2010: Excel</h4>
-                <h5>2013</h5>
-                <p><em>Servicio Nacional de Aprendizaje SENA, Colombia.</em></p>
-              </div>
-
-              <div class="resume-item">
-                <h4>Fundamentación De Ensamble Y Mantenimiento De Computadores Para Los Procesos De Soporte Técnico</h4>
-                <h5>2013</h5>
-                <p><em>Servicio Nacional de Aprendizaje SENA, Colombia.</em></p>
+          <div class="row" data-aos="fade-up">
+            <div class="col-12 mb-4">
+              <h5 class="text-muted mb-3">Frontend</h5>
+              <div class="d-flex flex-wrap gap-3">
+                <img
+                  src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"
+                  alt="HTML5"
+                  loading="lazy"
+                />
+                <img
+                  src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"
+                  alt="JavaScript"
+                  loading="lazy"
+                />
+                <img
+                  src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white"
+                  alt="Bootstrap"
+                  loading="lazy"
+                />
+                <img
+                  src="https://img.shields.io/badge/bulma-00D0B1?style=for-the-badge&logo=bulma&logoColor=white"
+                  alt="Bulma"
+                  loading="lazy"
+                />
+                <img
+                  src="https://img.shields.io/badge/daisyui-5A0EF8?style=for-the-badge&logo=daisyui&logoColor=white"
+                  alt="DaisyUI"
+                  loading="lazy"
+                />
+                <img
+                  src="https://img.shields.io/badge/Vuetify-1867C0?style=for-the-badge&logo=vuetify&logoColor=AEDDFF"
+                  alt="Vuetify"
+                  loading="lazy"
+                />
+                <img
+                  src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white"
+                  alt="TailwindCSS"
+                  loading="lazy"
+                />
+                <img
+                  src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white"
+                  alt="Next.js"
+                  loading="lazy"
+                />
               </div>
             </div>
 
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-              <h3 class="resume-title">Experiencia profesional</h3>
-
-              <div class="resume-item">
-                <h4>Disfarma GC S.A.S</h4>
-                <h5>2022 - 2023</h5>
-                <p><em>Analista de desarrollo de software</em></p>
-                <ul>
-                  <li>Migré aplicaciones escritas en PHP nativo al ERP de la compañía hecho en Laravel.</li>
-                  <li>Corregí el sistema de envío de emails, incluyendo el formato de los mismos.</li>
-                  <li>Implementé un sistema de borrado físico y lógico de adjuntos.</li>
-                  <li>Creé una API REST de consulta.</li>
-                  <li>Realicé diversos movimientos en la base de datos de forma manual.</li>
-                  <li>Brindé soporte técnico para resolver dificultades internas de la compañía.</li>
-                  <li>Arreglé y corregí bugs en diversas partes de otras aplicaciones.</li>
-                </ul>
+            <div class="col-12 mb-4">
+              <h5 class="text-muted mb-3">Backend</h5>
+              <div class="d-flex flex-wrap gap-3">
+                <img
+                  src="https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white"
+                  alt="Laravel"
+                  loading="lazy"
+                />
+                <img
+                  src="https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white"
+                  alt="PHP"
+                  loading="lazy"
+                />
+                <img
+                  src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white"
+                  alt="Node.js"
+                  loading="lazy"
+                />
+                <img
+                  src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB"
+                  alt="Express.js"
+                  loading="lazy"
+                />
+                <img
+                  src="https://img.shields.io/badge/apache-%23D42029.svg?style=for-the-badge&logo=apache&logoColor=white"
+                  alt="Apache"
+                  loading="lazy"
+                />
               </div>
+            </div>
 
-              <div class="resume-item">
-                <h4>Espigas S.A E.S.P</h4>
-                <h5>2013 - 2014</h5>
-                <p><em>Desarrollador web</em></p>
-                <ul>
-                  <li>Back-end y Front-end (Monolítico) de un sistema de quejas y reclamos.</li>
-                  <li>Diseño de la base de datos en MySQL/MariaDB.</li>
-                  <li>Creación de los manuales de usuario.</li>
-                </ul>
-                <h5>2016</h5>
-                <ul>
-                  <li>Actualización del sistema de quejas y reclamos según las leyes colombianas.</li>
-                  <li>Creación de un sistema de reportes de emergencia.</li>
-                  <li>Actualización de los manuales de usuario.</li>
-                </ul>
-                <h5>2024 (Iniciativa Personal, sin pedido del cliente)</h5>
-                <ul>
-                  <li>Función para tratamiento de texto basada en ucfirst.</li>
-                  <li>
-                    Función de autocompletar dos o más campos basándose en la identificación del usuario con validación
-                    de token CSRF.
-                  </li>
-                  <li>Función para realizar subidas y descargas de archivos CSV.</li>
-                </ul>
+            <div class="col-12 mb-4">
+              <h5 class="text-muted mb-3">Bases de datos</h5>
+              <div class="d-flex flex-wrap gap-3">
+                <img
+                  src="https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white"
+                  alt="MariaDB"
+                  loading="lazy"
+                />
+                <img
+                  src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white"
+                  alt="MySQL"
+                  loading="lazy"
+                />
+                <img
+                  src="https://img.shields.io/badge/Microsoft%20SQL%20Server-CC2927?style=for-the-badge&logo=microsoft%20sql%20server&logoColor=white"
+                  alt="SQL Server"
+                  loading="lazy"
+                />
               </div>
+            </div>
 
-              <div class="resume-item">
-                <h4>Fundación Tecnológica FITEC</h4>
-                <h5>2018</h5>
-                <p><em>Centro de contacto, Infraestructura</em></p>
-                <ul>
-                  <li>Atención de incidencias y mantenimiento de todos los equipos informáticos del plantel.</li>
-                </ul>
+            <div class="col-12 mb-4">
+              <h5 class="text-muted mb-3">Herramientas y plataformas</h5>
+              <div class="d-flex flex-wrap gap-3">
+                <img
+                  src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"
+                  alt="GitHub"
+                  loading="lazy"
+                />
+                <img
+                  src="https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white"
+                  alt="Cloudflare"
+                  loading="lazy"
+                />
+                <img
+                  src="https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white"
+                  alt="Markdown"
+                  loading="lazy"
+                />
+                <img
+                  src="https://img.shields.io/badge/Windows%20Terminal-%234D4D4D.svg?style=for-the-badge&logo=windows-terminal&logoColor=white"
+                  alt="Windows Terminal"
+                  loading="lazy"
+                />
+                <img
+                  src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white"
+                  alt="Postman"
+                  loading="lazy"
+                />
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- End Resume Section -->
+      <!-- End Skills Section -->
 
       <!-- ======= Portfolio Section ======= -->
       <section id="portfolio" class="portfolio">
@@ -393,29 +339,36 @@
           </nav>
 
           <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-            <div class="col-lg-4 col-md-6 portfolio-item filter-infos">
+            <!-- items -->
+            <div class="col-lg-4 col-md-6 portfolio-item filter-Proyectos">
               <div class="card h-100 shadow-sm align-items-center">
                 <div class="card-media">
                   <img
-                    src="assets/img/portfolio/wip500x300.png"
+                    src="assets/img/portfolio/grgportada500x300.png"
                     class="card-img-top"
-                    alt="Infografía de tipos de agarre"
+                    alt="Guía de Rénder Gaming"
                   />
                 </div>
                 <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">Infografía de tipos de agarre</h5>
-                  <p class="card-text">Se explica los tipos de agarre de mouse para realizar compras informadas.</p>
+                  <h5 class="card-title">Guía de Rénder Gaming</h5>
+                  <p class="card-text">
+                    Esta guía proporciona un desglose detallado de todas las opciones gráficas más comunes en los
+                    videojuegos, explicando cómo afectan al rendimiento del juego y a la calidad visual.
+                  </p>
                   <div class="mt-auto">
+                    <p class="card-tech text-muted small">
+                      Tecnologías: HTML, CSS, Typescript, Astro js, DaisyUI, bootstrap icons.
+                    </p>
                     <div class="d-flex gap-2">
-                      <button
-                        type="button"
-                        class="btn btn-primary btn-sm"
-                        data-bs-toggle="modal"
-                        data-bs-target="#modalInfografia"
-                        aria-label="Ver imagen de la infografía de tipos de agarre"
+                      <a href="https://guiarendergaming.pages.dev/" class="btn btn-primary btn-sm" target="_blank"
+                        >Ver Web</a
                       >
-                        Ver imagen
-                      </button>
+                      <a
+                        href="https://github.com/Danielbp019/GuiaRenderGaming"
+                        class="btn btn-outline-secondary btn-sm"
+                        target="_blank"
+                        >Código Fuente</a
+                      >
                     </div>
                   </div>
                 </div>
@@ -441,39 +394,6 @@
                       <a href="https://timbertec.pages.dev/" class="btn btn-primary btn-sm" target="_blank">Ver Web</a>
                       <a
                         href="https://github.com/Danielbp019/TimberTec"
-                        class="btn btn-outline-secondary btn-sm"
-                        target="_blank"
-                        >Código Fuente</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-Proyectos">
-              <div class="card h-100 shadow-sm align-items-center">
-                <div class="card-media">
-                  <img
-                    src="assets/img/portfolio/listaocio500x300.png"
-                    class="card-img-top"
-                    alt="Proyecto lista de ocio"
-                  />
-                </div>
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">Proyecto lista de ocio</h5>
-                  <p class="card-text">
-                    Almacena una lista ordenada de obras, con indicador de visto, comentarios, capítulos, nombre. Genera
-                    y se alimenta de archivos CSV.
-                  </p>
-                  <div class="mt-auto">
-                    <p class="card-tech text-muted small">
-                      Tecnologías: HTML, CSS, Javascript, Bootstrap 5, Next.js 15, Laravel 11, MariaDB, JWT, NodeJs,
-                      bootstrap icons.
-                    </p>
-                    <div class="d-flex gap-2">
-                      <a
-                        href="https://github.com/Danielbp019/proyecto-lista-ocio"
                         class="btn btn-outline-secondary btn-sm"
                         target="_blank"
                         >Código Fuente</a
@@ -524,6 +444,39 @@
               <div class="card h-100 shadow-sm align-items-center">
                 <div class="card-media">
                   <img
+                    src="assets/img/portfolio/listaocio500x300.png"
+                    class="card-img-top"
+                    alt="Proyecto lista de ocio"
+                  />
+                </div>
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Proyecto lista de ocio</h5>
+                  <p class="card-text">
+                    Almacena una lista ordenada de obras, con indicador de visto, comentarios, capítulos, nombre. Genera
+                    y se alimenta de archivos CSV.
+                  </p>
+                  <div class="mt-auto">
+                    <p class="card-tech text-muted small">
+                      Tecnologías: HTML, CSS, Javascript, Bootstrap 5, Next.js 15, Laravel 11, MariaDB, JWT, NodeJs,
+                      bootstrap icons.
+                    </p>
+                    <div class="d-flex gap-2">
+                      <a
+                        href="https://github.com/Danielbp019/proyecto-lista-ocio"
+                        class="btn btn-outline-secondary btn-sm"
+                        target="_blank"
+                        >Código Fuente</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-Proyectos">
+              <div class="card h-100 shadow-sm align-items-center">
+                <div class="card-media">
+                  <img
                     src="assets/img/portfolio/neuDefault.png"
                     class="card-img-top"
                     alt="Limpieza de cache generado por gráficas"
@@ -545,41 +498,6 @@
                         class="btn btn-outline-secondary btn-sm"
                         target="_blank"
                         >Código Fuente y Descarga</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-Proyectos">
-              <div class="card h-100 shadow-sm align-items-center">
-                <div class="card-media">
-                  <img
-                    src="assets/img/portfolio/grgportada500x300.png"
-                    class="card-img-top"
-                    alt="Guía de Rénder Gaming"
-                  />
-                </div>
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">Guía de Rénder Gaming</h5>
-                  <p class="card-text">
-                    Esta guía proporciona un desglose detallado de todas las opciones gráficas más comunes en los
-                    videojuegos, explicando cómo afectan al rendimiento del juego y a la calidad visual.
-                  </p>
-                  <div class="mt-auto">
-                    <p class="card-tech text-muted small">
-                      Tecnologías: HTML, CSS, Typescript, Astro js, DaisyUI, bootstrap icons.
-                    </p>
-                    <div class="d-flex gap-2">
-                      <a href="https://guiarendergaming.pages.dev/" class="btn btn-primary btn-sm" target="_blank"
-                        >Ver Web</a
-                      >
-                      <a
-                        href="https://github.com/Danielbp019/GuiaRenderGaming"
-                        class="btn btn-outline-secondary btn-sm"
-                        target="_blank"
-                        >Código Fuente</a
                       >
                     </div>
                   </div>
@@ -613,6 +531,33 @@
                         target="_blank"
                         >Código Fuente</a
                       >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-infos">
+              <div class="card h-100 shadow-sm align-items-center">
+                <div class="card-media">
+                  <img
+                    src="assets/img/portfolio/wip500x300.png"
+                    class="card-img-top"
+                    alt="Infografía de tipos de agarre"
+                  />
+                </div>
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Infografía de tipos de agarre</h5>
+                  <p class="card-text">Se explica los tipos de agarre de mouse para realizar compras informadas.</p>
+                  <div class="mt-auto">
+                    <div class="d-flex gap-2">
+                      <a
+                        href="assets/img/portfolio/wip.png"
+                        class="btn btn-primary btn-sm portfolio-lightbox"
+                        data-gallery="portfolioGallery"
+                      >
+                        Ver imagen
+                      </a>
                     </div>
                   </div>
                 </div>
