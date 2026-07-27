@@ -125,9 +125,59 @@
   });
 
   /**
+   * Render portfolio items from proyectos data
+   */
+  const renderPortfolioItems = () => {
+    const container = select("#portfolio-container");
+    if (!container || typeof proyectos === "undefined") return;
+
+    container.innerHTML = proyectos
+      .map(
+        (p) => `
+      <div class="col-lg-4 col-md-6 portfolio-item ${p.filtro}">
+        <div class="card h-100 shadow-sm align-items-center">
+          <div class="card-media">
+            <img
+              src="${p.img}"
+              class="card-img-top"
+              alt="${p.alt}"
+              loading="lazy"
+            />
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">${p.titulo}</h5>
+            <p class="card-text">${p.descripcion}</p>
+            <div class="mt-auto">
+              ${p.tecnologias ? `<p class="card-tech text-muted small">Tecnologías: ${p.tecnologias}</p>` : ""}
+              <div class="d-flex gap-2">
+                ${p.enlaces
+                  .map(
+                    (e) => `
+                  <a
+                    href="${e.url}"
+                    class="btn btn-sm ${e.clase}"
+                    target="_blank"
+                    ${p.lightbox ? `data-gallery="portfolioGallery"` : ""}
+                  >${e.texto}</a>
+                `,
+                  )
+                  .join("")}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `,
+      )
+      .join("");
+  };
+
+  /**
    * Porfolio isotope and filter
    */
   window.addEventListener("load", () => {
+    renderPortfolioItems();
+
     let portfolioContainer = select(".portfolio-container");
     if (portfolioContainer) {
       let portfolioIsotope = new Isotope(portfolioContainer, {

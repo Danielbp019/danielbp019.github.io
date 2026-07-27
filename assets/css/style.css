@@ -69,8 +69,8 @@ h6 {
 
 /* Tamaño del body en el card para que todos tengan el mismo */
 .card-body {
-  height: 300px; /* Ajusta el valor según el tamaño deseado */
-  overflow: hidden; /* Evita que el contenido sobresalga */
+  height: 350px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* Para distribuir el contenido */
